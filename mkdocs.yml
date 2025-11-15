@@ -1,0 +1,280 @@
+site_name: Understanding Data Roles in Tech
+site_description: A hands-on guide to exploring 20 data career paths through practical projects
+site_author: Gemma Down
+site_url: https://data-roles.sproodlebuzz.com
+
+repo_name: glsdown/data-roles-guide
+repo_url: https://github.com/glsdown/data-roles-guide
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+
+  palette:
+    # Light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - announce.dismiss # Dismissable announcements
+    - content.action.edit # Edit button on pages
+    - content.action.view # View source button
+    - content.code.annotate # Code annotations
+    - content.code.copy # Copy button for code blocks
+    - content.tabs.link # Link content tabs
+    - content.tooltips # Improved tooltips
+    - header.autohide # Hide header on scroll
+    - navigation.expand # Expand sections by default
+    - navigation.footer # Footer with prev/next
+    - navigation.indexes # Index pages for sections
+    - navigation.instant # Fast page loads (SPA-like)
+    - navigation.instant.prefetch # Prefetch pages on hover
+    - navigation.instant.progress # Show progress bar
+    - navigation.path # Breadcrumbs
+    - navigation.sections # Section grouping
+    - navigation.tabs # Top-level tabs
+    - navigation.tabs.sticky # Tabs stay visible
+    - navigation.top # Back to top button
+    - navigation.tracking # URL updates with scroll
+    - search.highlight # Highlight search terms
+    - search.share # Share search results
+    - search.suggest # Search suggestions
+    - toc.follow # TOC follows scroll
+    - toc.integrate # TOC integrated in nav
+
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+
+  - tags:
+      tags_file: reference/tags.md
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+
+  - pymdownx.betterem:
+      smart_enable: all
+
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  - pymdownx.critic:
+      mode: view
+
+  - pymdownx.details
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.keys
+
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - getting-started/index.md
+      - Introduction: getting-started/introduction.md
+      - Who This Is For: getting-started/who-this-is-for.md
+      - Setup Guide: getting-started/setup.md
+
+  - Fundamentals:
+      - fundamentals/index.md
+      - What is Data?: fundamentals/what-is-data.md
+      - The Data Lifecycle: fundamentals/data-lifecycle.md
+      - Modern Data Stack: fundamentals/modern-data-stack.md
+      - The Project: fundamentals/the-project.md
+
+  - The 20 Roles:
+      - roles/index.md
+      - Infrastructure:
+          - roles/infrastructure/index.md
+          - Backend Engineer: roles/infrastructure/backend-engineer.md
+          - Database Administrator: roles/infrastructure/database-administrator.md
+          - Platform Engineer: roles/infrastructure/platform-engineer.md
+          - DevOps Engineer: roles/infrastructure/devops-engineer.md
+      - Data Pipeline:
+          - roles/data-pipeline/index.md
+          - Data Engineer: roles/data-pipeline/data-engineer.md
+          - Analytics Engineer: roles/data-pipeline/analytics-engineer.md
+          - DataOps Engineer: roles/data-pipeline/dataops-engineer.md
+      - Analysis & Intelligence:
+          - roles/analysis/index.md
+          - Data Analyst: roles/analysis/data-analyst.md
+          - BI Engineer: roles/analysis/bi-engineer.md
+          - Data Scientist: roles/analysis/data-scientist.md
+          - ML Scientist: roles/analysis/ml-scientist.md
+      - Production:
+          - roles/production/index.md
+          - ML Engineer: roles/production/ml-engineer.md
+          - AI Engineer: roles/production/ai-engineer.md
+          - MLOps Engineer: roles/production/mlops-engineer.md
+      - Support & Quality:
+          - roles/support/index.md
+          - QA Engineer: roles/support/qa-engineer.md
+          - Data Governance: roles/support/data-governance.md
+          - Frontend Engineer: roles/support/frontend-engineer.md
+      - Strategic:
+          - roles/strategic/index.md
+          - Data Architect: roles/strategic/data-architect.md
+          - Data Product Manager: roles/strategic/data-product-manager.md
+          - Engineering Manager: roles/strategic/engineering-manager.md
+
+  - Hands-On Projects:
+      - hands-on/index.md
+      - Project Overview: hands-on/project-overview.md
+      - 1. Environment Setup: hands-on/01-setup-environment.md
+      - 2. Backend API: hands-on/02-backend-api.md
+      - 3. Database Setup: hands-on/03-database-setup.md
+      - 4. Data Pipeline: hands-on/04-data-pipeline.md
+      - 5. dbt Transformation: hands-on/05-dbt-transformation.md
+      - 6. SQL Analysis: hands-on/06-sql-analysis.md
+      - 7. Dashboard: hands-on/07-dashboard.md
+      - 8. ML Models: hands-on/08-ml-models.md
+      - 9. Deployment: hands-on/09-deployment.md
+      - 10. Monitoring: hands-on/10-monitoring.md
+
+  - Real-World Scenarios:
+      - scenarios/index.md
+      - End-to-End Project: scenarios/end-to-end-project.md
+      - Day in the Life: scenarios/day-in-the-life.md
+      - Team Collaboration: scenarios/collaboration.md
+
+  - Career Paths:
+      - career-paths/index.md
+      - Self-Assessment: career-paths/self-assessment.md
+      - Learning Roadmaps: career-paths/learning-roadmaps.md
+      - Job Search Strategy: career-paths/job-search.md
+      - Resources: career-paths/resources.md
+
+  - Reference:
+      - reference/index.md
+      - Glossary: reference/glossary.md
+      - Tools Guide: reference/tools-guide.md
+      - Skills Matrix: reference/skills-matrix.md
+      - FAQ: reference/faq.md
+      - Tags: reference/tags.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/glsdown
+      name: Gemma on GitHub
+
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/gemmasayers
+      name: Gemma on LinkedIn
+
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX # Replace with your GA4 tracking ID
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve by 
+            <a href="https://github.com/glsdown/data-roles-guide/issues/new" target="_blank" rel="noopener">opening an issue</a>.
+
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+copyright: >
+  Copyright &copy; 2024 Gemma Down –
+  <a href="#__consent">Change cookie settings</a>
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js

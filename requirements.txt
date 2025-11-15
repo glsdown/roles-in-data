@@ -1,0 +1,19 @@
+# Core MkDocs
+mkdocs>=1.6.0
+
+# Theme
+mkdocs-material>=9.5.0
+
+# Essential Plugins
+mkdocs-git-revision-date-localized-plugin>=1.2.0
+mkdocs-minify-plugin>=0.8.0
+
+# Markdown Extensions (included with mkdocs-material but explicit for clarity)
+pymdown-extensions>=10.0
+Pygments>=2.17.0
+
+# Optional but Recommended Plugins
+mkdocs-redirects>=1.2.0
+
+# For better search
+lunr>=0.7.0
