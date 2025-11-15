@@ -73,7 +73,7 @@ graph LR
 === "Data Warehouse"
     **Purpose:** Historical analysis
     
-    - P for queries
+    - Optimised for queries
     - Stores years of data
     - Analytics-friendly
     
@@ -143,17 +143,18 @@ select * from cleaned
     003,J. Smith,30,2024-11-07
 ```
     
-    ??? success "Solution"
-        Issues found:
-        
-        1. Row 2: Inconsistent customer name (same person?)
-        2. Row 2: Price has $ symbol (should be numeric)
-        3. Row 2: Date format differs (MM/DD/YYYY vs YYYY-MM-DD)
-        4. Row 3: Missing customer and price
-        5. Row 3: Negative price (invalid)
-        6. Row 3 & 4: Duplicate order_id
-        
-        An Analytics Engineer would write transformations to handle all of these!
+??? success "Solution"
+
+    Issues found:
+    
+    1. Row 2: Inconsistent customer name (same person?)
+    2. Row 2: Price has $ symbol (should be numeric)
+    3. Row 2: Date format differs (MM/DD/YYYY vs YYYY-MM-DD)
+    4. Row 3: Missing customer and price
+    5. Row 3: Negative price (invalid)
+    6. Row 3 & 4: Duplicate order_id
+    
+    An Analytics Engineer would write transformations to handle all of these!
 
 ---
 

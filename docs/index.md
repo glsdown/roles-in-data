@@ -238,25 +238,6 @@ Design systems and lead teams
 
 ---
 
-## About the Author
-
-**Gemma Down** has spent 12 years working across the data stack in roles including:
-
-- Data Analyst
-- Data Scientist
-- Analytics Engineer
-- Data Engineer
-- Full Stack Engineer
-
-She has also recruited for Data Analysts, Data Engineers, Analytics Engineers, and Engineering Managers, giving her insight into what these roles really require—from both sides of the hiring table.
-
-This guide distills 12 years of experience into a practical resource for anyone exploring data careers.
-
-[:fontawesome-brands-github: GitHub](https://github.com/glsdown){ .md-button }
-[:fontawesome-brands-linkedin: LinkedIn](https://linkedin.com/in/gemmasayers){ .md-button }
-
----
-
 ## Contributing
 
 This guide is open source! Found a typo? Have a suggestion? Want to add a role?

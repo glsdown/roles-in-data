@@ -540,7 +540,7 @@ graph LR
 
 ## Related Roles
 
-| Role | Overlap | Key Difference |
+| Role | Overlap | Key Difference in other role |
 |------|---------|----------------|
 | [Analytics Engineer](analytics-engineer.md) | 70% | Focus on transformation layer (dbt), less on extraction |
 | [Data Architect](../strategic/data-architect.md) | 50% | Design systems, less hands-on implementation |
