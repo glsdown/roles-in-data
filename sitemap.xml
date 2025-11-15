@@ -141,10 +141,6 @@
          <lastmod>2025-11-15</lastmod>
     </url>
     <url>
-         <loc>https://data-roles.sproodlebuzz.com/roles/data-engineer/</loc>
-         <lastmod>2025-11-15</lastmod>
-    </url>
-    <url>
          <loc>https://data-roles.sproodlebuzz.com/roles/analysis/</loc>
          <lastmod>2025-11-15</lastmod>
     </url>
@@ -154,6 +150,10 @@
     </url>
     <url>
          <loc>https://data-roles.sproodlebuzz.com/roles/data-pipeline/analytics-engineer/</loc>
+         <lastmod>2025-11-15</lastmod>
+    </url>
+    <url>
+         <loc>https://data-roles.sproodlebuzz.com/roles/data-pipeline/data-engineer/</loc>
          <lastmod>2025-11-15</lastmod>
     </url>
     <url>
