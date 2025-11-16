@@ -239,17 +239,20 @@ aws acm request-certificate \
 2. Click **"Create distribution"**
 3. Settings:
 
-**Origin:**
+**:
+
 - **Origin domain:** Select your S3 bucket (or paste website endpoint)
 - **Origin path:** leave empty
 - **Name:** `data-roles-s3`
 
-**Default cache behavior:**
+**:
+
 - **Viewer protocol policy:** Redirect HTTP to HTTPS
 - **Allowed HTTP methods:** GET, HEAD
 - **Cache policy:** CachingOptimised (recommended)
 
-**Settings:**
+**:
+
 - **Alternate domain names (CNAMEs):** `data-roles.sproodlebuzz.com`
 - **Custom SSL certificate:** Select your ACM certificate
 - **Default root object:** `index.html`
@@ -422,7 +425,8 @@ aws cloudfront create-invalidation \
 
 **Cause:** DNS propagation takes time
 
-**Fix:**
+**:
+
 - Wait 30-60 minutes
 - Check DNS with: `dig data-roles.sproodlebuzz.com`
 - Verify CNAME/A record is correct
